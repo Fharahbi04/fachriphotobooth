@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Booth dengan Timer & Multi-Foto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div class="content-container">
+        <!-- Kiri: Tampilan Video -->
+        <div class="left-section">
+            <h1>Fachri Photobooth📸 </h1>
+            <video id="video" autoplay></video>
+            <div id="timer"></div>
+            <div id="controls">
+                <label for="photoCount">Jumlah Foto: </label>
+                <select id="photoCount">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <button id="start">Mulai Ambil Foto</button>
+                <button id="downloadAll" style="display: none;">Unduh Semua Foto</button>
+            </div>
+        </div>
+    
+        <div class="right-section">
+            <h2>Hasil Foto</h2>
+            <div class="canvas-container" id="photoGrid"></div>
+            <div class="strip-container">
+                <canvas id="photoStrip"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
